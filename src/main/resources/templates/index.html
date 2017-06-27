@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.css" th:href="@{/bootstrap-3.3.7-dist/css/bootstrap.css}">
+  <link rel="stylesheet" href="../css/index.css" th:href="@{/css/index.css}">
+  <title>welcome</title>
+</head>
+<body>
+  <div class="container">
+    <form class="form-signin" action="" th:action="@{/user/login}" method="post">
+      <h2 class="form-signin-heading">Please sign in</h2>
+      <div class="form-group">
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input th:value="${email}" name="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+      </div>
+      <div class="form-group">
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+      </div>
+      <div class="form-group checkbox">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+        <a class="pull-right" th:href="@{/user/registerView}">Sign up</a>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    </form>
+  </div>
+  <script type="text/javascript" src="../plugins/jquery-3.2.1.js" th:href="@{/plugins/jquery-3.2.1.js}"></script>
+  <script type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap.js" th:href="@{/bootstrap-3.3.7-dist/js/bootstrap.js}"></script>
+</body>
+</html>
