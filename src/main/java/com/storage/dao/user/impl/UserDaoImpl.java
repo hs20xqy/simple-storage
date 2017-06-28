@@ -17,6 +17,11 @@ public class UserDaoImpl implements IUserDao {
     UserMapper userMapper;
 
     @Override
+    public User getUser(String email) {
+        return userMapper.selectUserByEmail(email);
+    }
+
+    @Override
     public User getUser(String email, String password) {
         return userMapper.selectUserByEmailAndPassword(email, password);
     }

@@ -16,6 +16,13 @@ public interface IUserService {
     User login(String email, String password);
 
     /**
+     * 检查邮箱是否存在
+     * @param email 邮箱
+     * @return
+     */
+    boolean checkEmailExist(String email);
+
+    /**
      * 用户注册
      * @param user
      * @return

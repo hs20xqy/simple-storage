@@ -15,6 +15,13 @@ public interface IUserDao {
     User getUser(String email, String password);
 
     /**
+     * 获取User
+     * @param email 邮箱
+     * @return
+     */
+    User getUser(String email);
+
+    /**
      * 删除User
      * @param userId 用户id
      * @return
@@ -34,4 +41,5 @@ public interface IUserDao {
      * @return
      */
     int updateUser(User user);
+
 }
