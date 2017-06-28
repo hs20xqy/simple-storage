@@ -42,7 +42,7 @@ public class UserServiceImpl implements IUserService {
         user.setCreateTime(new Date());
         // 生成6位随机salt
         Random random = new Random();
-        int saltInt = random.nextInt((999999 - 100000) + 1) + 1000000;
+        int saltInt = random.nextInt((999999 - 100000) + 1) + 100000;
         user.setSalt(String.valueOf(saltInt));
         // 加密密码
         try {

@@ -14,7 +14,6 @@ import javax.servlet.http.HttpServletResponse;
  * Created by hs on 2017/6/23.
  */
 @Controller
-@RequestMapping("/user")
 public class UserController {
 
     @Autowired
@@ -27,13 +26,13 @@ public class UserController {
         return view;
     }
 
-    @RequestMapping("/registerView")
+    @RequestMapping("/user/registerView")
     public ModelAndView registerView() {
         ModelAndView view = new ModelAndView("/register");
         return view;
     }
 
-    @RequestMapping("/login")
+    @RequestMapping("/user/login")
     public ModelAndView login(String email, String password) {
         ModelAndView view = new ModelAndView();
         User user = userService.login(email, password);
@@ -48,7 +47,7 @@ public class UserController {
         return view;
     }
 
-    @RequestMapping("/register")
+    @RequestMapping("/user/register")
     public ModelAndView register(User user, String rePassword, String remember) {
         ModelAndView view = new ModelAndView();
         if (!user.getPassword().equals(rePassword)) {
@@ -72,7 +71,7 @@ public class UserController {
         return view;
     }
 
-    @RequestMapping("/checkEmail")
+    @RequestMapping("/user/checkEmail")
     @ResponseBody
     public String checkEmail(String email, HttpServletResponse response) {
         if (userService.checkEmailExist(email)) {
