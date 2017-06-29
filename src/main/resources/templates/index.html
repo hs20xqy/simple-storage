@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 <html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-  <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.css" th:href="@{/AdminLTE-2.3.11/bootstrap/css/bootstrap.css}">
-  <!--<link rel="stylesheet" href="https://bootflat.github.io/bootflat/css/bootflat.css">-->
+  <th:block th:include="fragment/header :: header"/>
   <link rel="stylesheet" href="../css/index.css" th:href="@{/css/index.css}">
-  <title>welcome</title>
+  <title>index</title>
 </head>
 <body>
   <div class="container">
@@ -34,9 +29,5 @@
   <!-- Bootstrap -->
   <script type="text/javascript" src="../plugins/jquery-3.2.1.js" th:src="@{/plugins/jquery-3.2.1.js}"></script>
   <script type="text/javascript" src="../AdminLTE-2.3.11/bootstrap/js/bootstrap.js" th:src="@{/AdminLTE-2.3.11/bootstrap/js/bootstrap.js}"></script>
-  <!-- Bootflat's JS files.-->
-  <!--<script src="https://bootflat.github.io/bootflat/js/icheck.min.js"></script>-->
-  <!--<script src="https://bootflat.github.io/bootflat/js/jquery.fs.selecter.min.js"></script>-->
-  <!--<script src="https://bootflat.github.io/bootflat/js/jquery.fs.stepper.min.js"></script>-->
 </body>
 </html>

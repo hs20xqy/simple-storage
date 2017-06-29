@@ -29,7 +29,8 @@
 		<mysql.driver.version>5.1.4</mysql.driver.version>
 		<fastjson.version>1.2.33</fastjson.version>
 		<guava.version>22.0</guava.version>
-
+		<thymeleaf.version>3.0.6.RELEASE</thymeleaf.version>
+		<thymeleaf-layout-dialect.version>2.2.2</thymeleaf-layout-dialect.version>
 	</properties>
 
 	<dependencies>
@@ -61,11 +62,11 @@
 			<scope>test</scope>
 		</dependency>
 		<!-- thymeleaf model LEGACYHTML5 need -->
-		<dependency>
-			<groupId>net.sourceforge.nekohtml</groupId>
-			<artifactId>nekohtml</artifactId>
-			<version>${nekohtml.version}</version>
-		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>net.sourceforge.nekohtml</groupId>-->
+			<!--<artifactId>nekohtml</artifactId>-->
+			<!--<version>${nekohtml.version}</version>-->
+		<!--</dependency>-->
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid</artifactId>
